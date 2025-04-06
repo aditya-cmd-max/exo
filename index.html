@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exonova Blog</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background: #1e1e2f;
+      padding: 2rem;
+      text-align: center;
+      color: #fff;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header img.logo {
+      height: 50px;
+      margin-right: 1rem;
+    }
+
+    .title-wrap {
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.8;
+    }
+
+    .blogs {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .blog-card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 1.5rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+      transform: scale(1);
+      cursor: pointer;
+    }
+
+    .blog-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .blog-card h2 {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .blog-card p {
+      color: #555;
+      font-size: 1rem;
+    }
+
+    .slogan-section {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: linear-gradient(to right, #e0c3fc, #8ec5fc);
+      margin: 0 auto;
+      border-radius: 2rem 2rem 0 0;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .slogan-text {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2rem;
+      font-weight: 600;
+      background: linear-gradient(90deg, #ff758c, #ff7eb3);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background: #1e1e2f;
+      padding: 1rem;
+      text-align: center;
+      color: #ccc;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .fadeIn {
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="fadeIn">
+    <img src="logo.png" alt="Exonova Logo" class="logo">
+    <div class="title-wrap">
+      <h1>Exonova Blog</h1>
+      <p>Dive into the minds behind the knowledge. Explore our latest articles below.</p>
+    </div>
+  </header>
+
+  <section class="blogs fadeIn">
+    <a href="blog1.html">
+      <div class="blog-card">
+        <h2>Blog #1: The Future of Education</h2>
+        <p>Explore how modern tools are revolutionizing the way we teach and learn.</p>
+      </div>
+    </a>
+    <a href="blog2.html">
+      <div class="blog-card">
+        <h2>Blog #2: The Power of Asking Questions</h2>
+        <p>Unlock your inner genius—one curious question at a time.</p>
+      </div>
+    </a>
+    <a href="blog3.html">
+      <div class="blog-card">
+        <h2>Blog #3: Behind the Scenes at Exonova</h2>
+        <p>Peek into the thought process and the team that brings knowledge to life.</p>
+      </div>
+    </a>
+  </section>
+
+  <div class="slogan-section">
+    <h2 class="slogan-text">Embrace the path of endless liberty</h2>
+  </div>
+
+  <footer class="fadeIn">
+    © 2025 Exonova. All rights reserved.
+  </footer>
+</body>
+</html>
