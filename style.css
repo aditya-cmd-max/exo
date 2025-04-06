@@ -53,4 +53,16 @@ header p {
   border-radius: 1.5rem;
   box-shadow: 
 ::contentReference[oaicite:0]{index=0}
+
+  .fadeIn {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease-out;
+}
+
+.fadeIn.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
  
