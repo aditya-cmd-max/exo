@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Primary Meta Tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#000000">
+  
+  <title>Exonova - Exploring truth, Expanding Human Liberty | Science Facts, Quizzes & Blogs</title>
+  <meta name="description" content="Exonova is India's next-gen educational platform offering amazing science facts, engaging quizzes, and motivational content crafted for curious minds.">
+  
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Exonova - Discover • Learn • Grow">
+  <meta property="og:description" content="Explore Exonova's world of science facts, quizzes, and motivational learning.">
+  <meta property="og:image" content="https://aditya-cmd-max.github.io/exonova-/exonova-logo.png">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="https://aditya-cmd-max.github.io/exonova-/exonova-logo.png" type="image/png">
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Performance Optimizations -->
+  <link rel="preload" href="style.css" as="style">
+  <link rel="preload" href="script.js" as="script">
+  
+  <!-- Critical CSS -->
+  <style>
+    :root {
+      --primary: #00f7ff;
+      --secondary: #7b2dff;
+      --accent: #ff2d7b;
+      --dark: #0a0f1f;
+      --darker: #050917;
+      --text-light: #ffffff;
+      --text-muted: #a0a8c0;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--dark);
+      color: var(--text-light);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+    
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* Performance optimizations */
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    /* Will-change for animations */
+    .will-animate {
+      will-change: transform, opacity;
+    }
+  </style>
+  
+  <!-- Main Stylesheet (loaded non-blocking) -->
+  <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+  
+  <!-- Preload important resources -->
+  <link rel="preload" href="https://aditya-cmd-max.github.io/exonova-/exonova-logo.png" as="image">
+</head>
+
+<body>
+  <!-- Loading Animation -->
+  <div class="loader">
+    <div class="loader-inner">
+      <div class="loader-line-wrap">
+        <div class="loader-line"></div>
+      </div>
+      <div class="loader-line-wrap">
+        <div class="loader-line"></div>
+      </div>
+      <div class="loader-line-wrap">
+        <div class="loader-line"></div>
+      </div>
+      <div class="loader-line-wrap">
+        <div class="loader-line"></div>
+      </div>
+      <div class="loader-line-wrap">
+        <div class="loader-line"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-indicator" id="scrollIndicator"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="/" class="logo">
+        <img src="https://aditya-cmd-max.github.io/exonova-/exonovab.png" alt="Exonova Logo" loading="lazy">
+      </a>
+      
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="blogs.html" class="nav-link">Blog</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="quiz.html" class="nav-link">Quiz</a>
+        <a href="signin.html" class="nav-link">Sign In</a>
+      </div>
+      
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="particles" id="particles"></div>
+    
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          <span class="gradient-text">Explore</span> the Universe of Knowledge
+        </h1>
+        <p class="hero-subtitle">
+          Exonova bridges the gap between curiosity and understanding with cutting-edge educational content
+        </p>
+        <div class="hero-buttons">
+          <a href="blogs.html" class="btn primary">Start Learning</a>
+          <a href="about.html" class="btn secondary">Discover More</a>
+        </div>
+      </div>
+      
+      <div class="hero-image">
+        <img src="https://aditya-cmd-max.github.io/exonova-/exonova-logo.png" alt="Exonova Illustration" loading="lazy">
+      </div>
+    </div>
+    
+    <div class="scroll-down">
+      <span>Scroll Down</span>
+      <div class="arrow"></div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="container">
+      <div class="section-header">
+        <h2>Why Choose <span class="gradient-text">Exonova</span></h2>
+        <p>We combine education with entertainment to create unforgettable learning experiences</p>
+      </div>
+      
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-atom"></i>
+          </div>
+          <h3>Science Facts</h3>
+          <p>Daily doses of mind-blowing scientific discoveries and phenomena explained simply.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-brain"></i>
+          </div>
+          <h3>Interactive Quizzes</h3>
+          <p>Test your knowledge with our gamified learning system that adapts to your level.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-book-open"></i>
+          </div>
+          <h3>Educational Blogs</h3>
+          <p>In-depth articles written by experts to expand your understanding of complex topics.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-rocket"></i>
+          </div>
+          <h3>Future Tech</h3>
+          <p>Stay ahead with insights into emerging technologies that will shape our world.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Science Facts Section -->
+  <section class="science-facts">
+    <div class="container">
+      <div class="section-header">
+        <h2>Amazing <span class="gradient-text">Science Facts</span></h2>
+        <p>Expand your mind with these incredible scientific truths</p>
+      </div>
+      
+      <div class="facts-carousel">
+        <div class="fact-card">
+          <div class="fact-content">
+            <h3>Quantum Entanglement</h3>
+            <p>Particles can become entangled and instantly affect each other, no matter how far apart they are in the universe.</p>
+          </div>
+          <div class="fact-image">
+            <i class="fas fa-atom"></i>
+          </div>
+        </div>
+        
+        <div class="fact-card">
+          <div class="fact-content">
+            <h3>Human Brain Power</h3>
+            <p>Your brain generates about 12-25 watts of electricity - enough to power a low-wattage LED light.</p>
+          </div>
+          <div class="fact-image">
+            <i class="fas fa-brain"></i>
+          </div>
+        </div>
+        
+        <div class="fact-card">
+          <div class="fact-content">
+            <h3>Stellar Numbers</h3>
+            <p>There are more stars in the universe than grains of sand on all Earth's beaches combined.</p>
+          </div>
+          <div class="fact-image">
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+      </div>
+      
+      <a href="facts.html" class="btn primary">More Facts</a>
+    </div>
+  </section>
+
+  <!-- Blog Highlights -->
+  <section class="blog-highlights">
+    <div class="container">
+      <div class="section-header">
+        <h2>Latest from <span class="gradient-text">Our Blog</span></h2>
+        <p>Explore our most recent educational articles and insights</p>
+      </div>
+      
+      <div class="blog-grid">
+        <article class="blog-card">
+          <div class="blog-image">
+            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Science of Sleep" loading="lazy">
+          </div>
+          <div class="blog-content">
+            <h3>The Science of Sleep</h3>
+            <p>Explore how sleep is crucial for cognitive function and overall health, especially for students and young minds.</p>
+            <a href="blog-science-of-sleep.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+        
+        <article class="blog-card">
+          <div class="blog-image">
+            <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Study Hacks" loading="lazy">
+          </div>
+          <div class="blog-content">
+            <h3>Top 5 Study Hacks</h3>
+            <p>Boost your learning with science-backed techniques that enhance memory retention and comprehension.</p>
+            <a href="blog-study-hacks.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+        
+        <article class="blog-card">
+          <div class="blog-image">
+            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Economics" loading="lazy">
+          </div>
+          <div class="blog-content">
+            <h3>Introduction to Economics</h3>
+            <p>Get an overview of how individuals and societies make choices with limited resources in our economic systems.</p>
+            <a href="blog-economics.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
+      
+      <a href="blogs.html" class="btn secondary">View All Blogs</a>
+    </div>
+  </section>
+
+  <!-- Founder Section -->
+  <section class="founder">
+    <div class="container">
+      <div class="founder-content">
+        <h2>Meet Our <span class="gradient-text">Founder</span></h2>
+        <p>Aditya Jha, a passionate educator and science enthusiast, founded Exonova with the vision to make learning accessible, engaging, and transformative for students across India.</p>
+        <div class="founder-stats">
+          <div class="stat">
+            <span class="number">10K+</span>
+            <span class="label">Students Reached</span>
+          </div>
+          <div class="stat">
+            <span class="number">100+</span>
+            <span class="label">Educational Articles</span>
+          </div>
+          <div class="stat">
+            <span class="number">1M+</span>
+            <span class="label">Content Views</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="founder-image">
+        <div class="image-wrapper">
+          <img src="https://aditya-cmd-max.github.io/exonova-/exonova-logo.png" alt="Aditya Jha" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <h2>What <span class="gradient-text">Students Say</span></h2>
+        <p>Hear from those who have transformed their learning with Exonova</p>
+      </div>
+      
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="quote">"Exonova made complex science concepts so easy to understand. I went from struggling to top of my class!"</div>
+          <div class="author">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Riya Sharma" loading="lazy">
+            <div class="author-info">
+              <h4>Riya Sharma</h4>
+              <p>Class 12 Student</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="quote">"The quizzes are addictive in the best way possible. I learn without even realizing I'm studying!"</div>
+          <div class="author">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Arjun Patel" loading="lazy">
+            <div class="author-info">
+              <h4>Arjun Patel</h4>
+              <p>Engineering Student</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="quote">"As a teacher, I recommend Exonova to all my students. The quality of content is exceptional."</div>
+          <div class="author">
+            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Dr. Priya Singh" loading="lazy">
+            <div class="author-info">
+              <h4>Dr. Priya Singh</h4>
+              <p>Physics Professor</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta">
+    <div class="container">
+      <h2>Ready to Transform Your Learning Experience?</h2>
+      <p>Join thousands of students who are already discovering the joy of learning with Exonova</p>
+      <div class="cta-buttons">
+        <a href="signup.html" class="btn primary">Sign Up Free</a>
+        <a href="about.html" class="btn secondary">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <img src="https://aditya-cmd-max.github.io/exonova-/exonovab.png" alt="Exonova Logo" class="footer-logo" loading="lazy">
+          <p>Exploring truth, expanding human liberty through education.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="blogs.html">Blog</a></li>
+            <li><a href="facts.html">Science Facts</a></li>
+            <li><a href="quiz.html">Quizzes</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Newsletter</h3>
+          <p>Subscribe for weekly science insights</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your Email">
+            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Exonova. All rights reserved. Made with <i class="fas fa-heart"></i> by Aditya Jha</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Notification Bell -->
+  <div class="notification-bell" id="notificationBell">
+    <i class="fas fa-bell"></i>
+    <span class="notification-count">3</span>
+  </div>
+
+  <!-- Notification Panel -->
+  <div class="notification-panel" id="notificationPanel">
+    <div class="notification-header">
+      <h4>Notifications</h4>
+      <button class="close-panel"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="notification-list">
+      <div class="notification-item">
+        <div class="notification-icon">
+          <i class="fas fa-newspaper"></i>
+        </div>
+        <div class="notification-content">
+          <p>New blog post: The Science of Sleep</p>
+          <span class="notification-time">2 hours ago</span>
+        </div>
+      </div>
+      <div class="notification-item">
+        <div class="notification-icon">
+          <i class="fas fa-trophy"></i>
+        </div>
+        <div class="notification-content">
+          <p>You earned the Quantum Explorer badge!</p>
+          <span class="notification-time">1 day ago</span>
+        </div>
+      </div>
+      <div class="notification-item">
+        <div class="notification-icon">
+          <i class="fas fa-question-circle"></i>
+        </div>
+        <div class="notification-content">
+          <p>New quiz available: Physics Fundamentals</p>
+          <span class="notification-time">3 days ago</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+  <script src="script.js" defer></script>
+  
+  <!-- Inline Script for Critical Functionality -->
+  <script>
+    // Immediately load critical JS functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      // Remove loader when page loads
+      const loader = document.querySelector('.loader');
+      if (loader) {
+        setTimeout(() => {
+          loader.style.opacity = '0';
+          setTimeout(() => {
+            loader.style.display = 'none';
+          }, 500);
+        }, 1000);
+      }
+      
+      // Mobile menu toggle
+      const menuBtn = document.getElementById('menuBtn');
+      const navLinks = document.getElementById('navLinks');
+      
+      if (menuBtn && navLinks) {
+        menuBtn.addEventListener('click', function() {
+          this.classList.toggle('active');
+          navLinks.classList.toggle('active');
+        });
+      }
+      
+      // Back to top button
+      const backToTop = document.getElementById('backToTop');
+      if (backToTop) {
+        backToTop.addEventListener('click', () => {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        });
+        
+        window.addEventListener('scroll', () => {
+          if (window.pageYOffset > 300) {
+            backToTop.classList.add('show');
+          } else {
+            backToTop.classList.remove('show');
+          }
+        });
+      }
+      
+      // Notification bell functionality
+      const notificationBell = document.getElementById('notificationBell');
+      const notificationPanel = document.getElementById('notificationPanel');
+      
+      if (notificationBell && notificationPanel) {
+        notificationBell.addEventListener('click', function(e) {
+          e.stopPropagation();
+          notificationPanel.classList.toggle('active');
+        });
+        
+        document.addEventListener('click', function(e) {
+          if (!notificationPanel.contains(e.target) {
+            notificationPanel.classList.remove('active');
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>
